@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Task+CRUD.h"
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -16,10 +16,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    NSArray *taskNames = @[ @"Task 1", @"Task 2", @"Hello World"];
+    for (NSString *taskName in taskNames) {
+        Task *task = [Task taskWithName:taskName InManagedObjectContext:self.managedObjectContext];
+        NSLog(@"Task %@ Created", task.name);
+    }
+    UINavigationController *navController = (UINavigationController *)self.window.rootViewController;
+    UIViewController *controller = navController.topViewController;
+    [controller performSelector:@selector(setContext:) withObject:self.managedObjectContext];
+    
     return YES;
 }
 

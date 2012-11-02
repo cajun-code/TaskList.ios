@@ -24,6 +24,18 @@
 		CE816D8116433D000040F025 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE816D6016433D000040F025 /* CoreData.framework */; };
 		CE816D8916433D000040F025 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE816D8716433D000040F025 /* InfoPlist.strings */; };
 		CE816D8C16433D000040F025 /* TaskListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816D8B16433D000040F025 /* TaskListTests.m */; };
+		CE816D9D16433F160040F025 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816D9C16433F160040F025 /* Category.m */; };
+		CE816D9E16433F160040F025 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816D9C16433F160040F025 /* Category.m */; };
+		CE816DA516433F570040F025 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DA416433F570040F025 /* Task.m */; };
+		CE816DA616433F570040F025 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DA416433F570040F025 /* Task.m */; };
+		CE816DA916433FF00040F025 /* Task+CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DA816433FF00040F025 /* Task+CRUD.m */; };
+		CE816DAA16433FF00040F025 /* Task+CRUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DA816433FF00040F025 /* Task+CRUD.m */; };
+		CE816DAC164345580040F025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE816DAB164345580040F025 /* Main.storyboard */; };
+		CE816DAD164345580040F025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE816DAB164345580040F025 /* Main.storyboard */; };
+		CE816DB0164346090040F025 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DAF164346090040F025 /* TaskViewController.m */; };
+		CE816DB1164346090040F025 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DAF164346090040F025 /* TaskViewController.m */; };
+		CE816DB416434E210040F025 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DB316434E210040F025 /* EditTaskViewController.m */; };
+		CE816DB516434E210040F025 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE816DB316434E210040F025 /* EditTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +70,17 @@
 		CE816D8816433D000040F025 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE816D8A16433D000040F025 /* TaskListTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListTests.h; sourceTree = "<group>"; };
 		CE816D8B16433D000040F025 /* TaskListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListTests.m; sourceTree = "<group>"; };
+		CE816D9B16433F160040F025 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		CE816D9C16433F160040F025 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		CE816DA316433F570040F025 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		CE816DA416433F570040F025 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		CE816DA716433FF00040F025 /* Task+CRUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+CRUD.h"; sourceTree = "<group>"; };
+		CE816DA816433FF00040F025 /* Task+CRUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+CRUD.m"; sourceTree = "<group>"; };
+		CE816DAB164345580040F025 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE816DAE164346090040F025 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		CE816DAF164346090040F025 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		CE816DB216434E210040F025 /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTaskViewController.h; sourceTree = "<group>"; };
+		CE816DB316434E210040F025 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +143,21 @@
 		CE816D6216433D000040F025 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
+				CE816DA316433F570040F025 /* Task.h */,
+				CE816DA416433F570040F025 /* Task.m */,
+				CE816DA716433FF00040F025 /* Task+CRUD.h */,
+				CE816DA816433FF00040F025 /* Task+CRUD.m */,
+				CE816D9B16433F160040F025 /* Category.h */,
+				CE816D9C16433F160040F025 /* Category.m */,
 				CE816D6B16433D000040F025 /* AppDelegate.h */,
 				CE816D6C16433D000040F025 /* AppDelegate.m */,
 				CE816D7416433D000040F025 /* TaskList.xcdatamodeld */,
 				CE816D6316433D000040F025 /* Supporting Files */,
+				CE816DAB164345580040F025 /* Main.storyboard */,
+				CE816DAE164346090040F025 /* TaskViewController.h */,
+				CE816DAF164346090040F025 /* TaskViewController.m */,
+				CE816DB216434E210040F025 /* EditTaskViewController.h */,
+				CE816DB316434E210040F025 /* EditTaskViewController.m */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -236,6 +270,7 @@
 				CE816D6F16433D000040F025 /* Default.png in Resources */,
 				CE816D7116433D000040F025 /* Default@2x.png in Resources */,
 				CE816D7316433D000040F025 /* Default-568h@2x.png in Resources */,
+				CE816DAC164345580040F025 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE816D8916433D000040F025 /* InfoPlist.strings in Resources */,
+				CE816DAD164345580040F025 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +309,11 @@
 				CE816D6916433D000040F025 /* main.m in Sources */,
 				CE816D6D16433D000040F025 /* AppDelegate.m in Sources */,
 				CE816D7616433D000040F025 /* TaskList.xcdatamodeld in Sources */,
+				CE816D9D16433F160040F025 /* Category.m in Sources */,
+				CE816DA516433F570040F025 /* Task.m in Sources */,
+				CE816DA916433FF00040F025 /* Task+CRUD.m in Sources */,
+				CE816DB0164346090040F025 /* TaskViewController.m in Sources */,
+				CE816DB416434E210040F025 /* EditTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE816D8C16433D000040F025 /* TaskListTests.m in Sources */,
+				CE816D9E16433F160040F025 /* Category.m in Sources */,
+				CE816DA616433F570040F025 /* Task.m in Sources */,
+				CE816DAA16433FF00040F025 /* Task+CRUD.m in Sources */,
+				CE816DB1164346090040F025 /* TaskViewController.m in Sources */,
+				CE816DB516434E210040F025 /* EditTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

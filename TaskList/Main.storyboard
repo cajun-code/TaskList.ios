@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rge-ZI-YWv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Task View Controller - Edit Task-->
+        <scene sceneID="k9r-L2-Rdu">
+            <objects>
+                <viewController id="epQ-AD-V8j" customClass="EditTaskViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kcf-zr-CgG">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTN-Fe-6hJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tOc-V2-lfZ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="KGH-Dh-O6o"/>
+                                </constraints>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Done" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2g-ZI-fr4">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bTN-Fe-6hJ" firstAttribute="top" secondItem="Kcf-zr-CgG" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8fy-YT-ZON"/>
+                            <constraint firstItem="C2g-ZI-fr4" firstAttribute="top" secondItem="bTN-Fe-6hJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AvU-Om-BJD"/>
+                            <constraint firstItem="tOc-V2-lfZ" firstAttribute="leading" secondItem="C2g-ZI-fr4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ER9-rK-vPf"/>
+                            <constraint firstItem="tOc-V2-lfZ" firstAttribute="top" secondItem="bTN-Fe-6hJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NdX-JI-C8x"/>
+                            <constraint firstAttribute="trailing" secondItem="bTN-Fe-6hJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Tbs-Rd-ecW"/>
+                            <constraint firstAttribute="trailing" secondItem="tOc-V2-lfZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="glS-la-gAd"/>
+                            <constraint firstItem="C2g-ZI-fr4" firstAttribute="leading" secondItem="Kcf-zr-CgG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lo8-Ef-5Eu"/>
+                            <constraint firstItem="bTN-Fe-6hJ" firstAttribute="leading" secondItem="Kcf-zr-CgG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="uLR-iZ-3I8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Task" id="nSp-6w-Ny7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Bbc-FJ-w2D">
+                            <connections>
+                                <action selector="dismissEditView:" destination="epQ-AD-V8j" id="5s4-Xe-REc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taskDone" destination="tOc-V2-lfZ" id="nMt-gT-RCm"/>
+                        <outlet property="taskName" destination="bTN-Fe-6hJ" id="aZk-dj-Ron"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6o-A4-SG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1323" y="-393"/>
+        </scene>
+        <!--Task View Controller - Task List-->
+        <scene sceneID="SyU-1k-Ihm">
+            <objects>
+                <tableViewController id="I4h-cp-38s" customClass="TaskViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CD6-h6-KCJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" textLabel="EZi-xT-eNg" style="IBUITableViewCellStyleDefault" id="eJS-v9-8bK">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZi-xT-eNg">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Task List" id="e6w-uc-HIt"/>
+                    <connections>
+                        <segue destination="epQ-AD-V8j" kind="push" identifier="editTask" id="zGD-yW-ush"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shA-nv-aPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="-401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lVg-a5-Jpu">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="rge-ZI-YWv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="daU-bc-Y7o">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="I4h-cp-38s" kind="relationship" relationship="rootViewController" id="TPg-F2-96O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwd-Zv-ScN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="-401"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="EditTaskViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditTaskViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissEditView:"/>
+                <relationship kind="outlet" name="taskDone" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="taskName" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="TaskViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TaskViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
